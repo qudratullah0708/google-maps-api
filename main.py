@@ -15,7 +15,7 @@ app = FastAPI()
 # Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://lead-genius-suite.vercel.app"],    # For development "http://127.0.0.1:8000"
+    allow_origins=["https://lead-genius-suite.vercel.app","http://localhost:8080"],    # For development "http://127.0.0.1:8000"
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
