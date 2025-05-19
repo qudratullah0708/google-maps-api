@@ -5,4 +5,5 @@
  ###   uv venv 
  ###   source .venv/Scripts/activate
  ###   uv add - r requriements.txt
+### SERPER_API_KEY='API-KEY'   setups the api key in .env
  ###   uvicorn main:app --reload
