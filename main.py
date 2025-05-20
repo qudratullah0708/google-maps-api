@@ -43,7 +43,7 @@ def search_places(request: SearchRequest):
 
     try:
         conn = http.client.HTTPSConnection("google.serper.dev")
-        conn.request("POST", "/maps", payload, headers)
+        conn.request("POST", "/places", payload, headers)
         res = conn.getresponse()
         data = res.read()
         conn.close()
