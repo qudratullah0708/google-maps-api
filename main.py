@@ -25,7 +25,6 @@ app.add_middleware(
 class SearchRequest(BaseModel):
     query: str
     location: str
-    tbs: str  # optional if needed by your use case
 
 @app.post("/search-places/")
 def search_places(request: SearchRequest):
@@ -42,7 +41,6 @@ def search_places(request: SearchRequest):
     while True:
         payload = json.dumps({
             "q": query_combined,
-            "tbs": request.tbs,
             "type": "places",
             "page": page
         })
